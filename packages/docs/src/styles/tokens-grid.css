@@ -1,6 +1,8 @@
 .tokens-grid {
   width: 100%;
-  font-family: monospace;
+  font-family: sans-serif;
+  color: #fff;
+  border-collapse: collapse;
 }
 
 .tokens-grid thead th {
@@ -13,6 +15,16 @@
   color: #ccc;
 }
 
+.tokens-grid tbody td:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.tokens-grid tbody td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
 .tokens-grid tbody tr:nth-child(even) td {
-  background-color: #ccc;
+  background: #444;
 }

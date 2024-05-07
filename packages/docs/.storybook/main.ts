@@ -1,41 +1,26 @@
-import type { StorybookConfig } from "@storybook/react-vite";
-
-import { join, dirname } from "path";
-
-/**
- * This function is used to resolve the absolute path of a package.
- * It is needed in projects that use Yarn PnP or are set up within a monorepo.
- */
-function getAbsolutePath(value: string): any {
-  return dirname(require.resolve(join(value, "package.json")));
-}
-const config: StorybookConfig = {
-  stories: [
-    "../src/pages/**/*.mdx", 
-    "../src/stories/**/*.stories.tsx"],
-  addons: [
-    getAbsolutePath("@storybook/addon-onboarding"),
-    getAbsolutePath("@storybook/addon-links"),
-    getAbsolutePath("@storybook/addon-essentials"),
-    getAbsolutePath("@chromatic-com/storybook"),
-    getAbsolutePath("@storybook/addon-interactions"),
-    getAbsolutePath("@storybook/addon-themes"),
-    getAbsolutePath("@storybook/addon-a11y"),
+module.exports = {
+  "stories": [
+    "../src/pages/**/*.stories.mdx",
+    "../src/stories/**/*.stories.tsx"
   ],
-  framework: {
-    name: getAbsolutePath("@storybook/react-vite"),
-    options: {},
+  "addons": [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-interactions",
+    '@storybook/addon-a11y'
+  ],
+  "framework": "@storybook/react",
+  "core": {
+    "builder": "@storybook/builder-vite"
   },
-  docs: {
-    autodocs: "tag",
-    defaultName: "Docs",
+  "features": {
+    "storyStoreV7": true
   },
-  viteFinal: (config , {configType}) => {
-    if(configType === 'PRODUCTION'){
-      config.base = '/desing-system/'
+  viteFinal: (config, {configType}) => {
+    if(configType === 'PRODUCTION') {
+      config.base = '/design-system-ignite/'
     }
 
     return config
   }
-};
-export default config;
+}
