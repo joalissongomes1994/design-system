@@ -1,5 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
+<<<<<<< HEAD
 import { MultiStep, MultiStepProps, Box } from '@ignite-ui/react/src'
+=======
+import { MultiStep, MultiStepProps } from '@ignite-ui/react/src/index'
+import { Box } from '@ignite-ui/react'
+>>>>>>> parent of 2400247 (fix: Change in Storybook preview)
 
 export default {
   title: 'Form/Multi Step',
