@@ -1,10 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-<<<<<<< HEAD
 import { Checkbox, CheckboxProps, Box, Text } from '@ignite-ui/react/src'
-=======
-import { Checkbox, CheckboxProps } from '@ignite-ui/react/src/index'
-import { Box, Text } from '@ignite-ui/react'
->>>>>>> parent of 2400247 (fix: Change in Storybook preview)
 
 export default {
   title: 'Form/Checkbox',
