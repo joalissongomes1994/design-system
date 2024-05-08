@@ -1,6 +1,5 @@
 import { ComponentProps } from 'react'
 import { styled } from '../styles'
-import { VariantProps } from '@stitches/react'
 
 export const TextArea = styled('textarea', {
   backgroundColor: '$gray900',
@@ -8,8 +7,6 @@ export const TextArea = styled('textarea', {
   borderRadius: '$sm',
   boxSizing: 'border-box',
   border: '2px solid $gray900',
-  display: 'flex',
-  alignItems: 'baseline',
 
   fontFamily: '$default',
   fontSize: '$sm',
@@ -33,7 +30,6 @@ export const TextArea = styled('textarea', {
   },
 })
 
-interface TextComponentProps extends ComponentProps<typeof TextArea> {}
-export interface TextAreaProps extends VariantProps<TextComponentProps> {}
+export interface TextAreaProps extends ComponentProps<typeof TextArea> {}
 
 TextArea.displayName = 'TextArea'

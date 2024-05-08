@@ -1,12 +1,12 @@
 import {
   colors,
+  fonts,
   fontSizes,
   fontWeights,
-  fonts,
   lineHeights,
   radii,
   space,
-} from '@ignite-ui/tokens/src'
+} from '@ignite-ui/tokens'
 import { createStitches, defaultThemeMap } from '@stitches/react'
 
 export const {
@@ -24,6 +24,7 @@ export const {
     height: 'space',
     width: 'space',
   },
+
   theme: {
     colors,
     fontSizes,

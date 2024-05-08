@@ -1,16 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Text, TextProps } from '@ignite-ui/react'
+import { Text, TextProps } from '@ignite-ui/react/src'
 
 export default {
   title: 'Typography/Text',
   component: Text,
-  tags: ['autodocs'],
   args: {
     size: 'md',
-    children: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-    Perferendis dignissimos repudiandae quibusdam, ipsam omnis asperiores ipsa 
-    facere eum temporibus, delectus error perspiciatis expedita officiis? Sunt 
-    eveniet nulla voluptates illum reprehenderit.`,
+    children:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro reprehenderit est veniam? Rem recusandae sint perspiciatis debitis corrupti. Deserunt neque exercitationem illo voluptatum laudantium culpa suscipit accusantium blanditiis voluptas numquam.',
   },
   argTypes: {
     size: {
@@ -29,7 +26,9 @@ export default {
         '8xl',
         '9xl',
       ],
-      control: { type: 'inline-radio' },
+      control: {
+        type: 'inline-radio',
+      },
     },
   },
 } as Meta<TextProps>
@@ -38,7 +37,7 @@ export const Primary: StoryObj<TextProps> = {}
 
 export const CustomTag: StoryObj<TextProps> = {
   args: {
-    children: 'Strong Text',
+    children: 'Strong text',
     as: 'strong',
   },
 }

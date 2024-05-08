@@ -1,6 +1,5 @@
-import { VariantProps } from '@stitches/react'
+import { ComponentProps, ElementType } from 'react'
 import { styled } from '../styles'
-import { ComponentProps } from 'react'
 
 export const Text = styled('p', {
   fontFamily: '$default',
@@ -27,11 +26,12 @@ export const Text = styled('p', {
   },
 
   defaultVariants: {
-    size: '$md',
+    size: 'md',
   },
 })
 
-interface TextComponentProps extends ComponentProps<typeof Text> {}
-export interface TextProps extends VariantProps<TextComponentProps> {}
+export interface TextProps extends ComponentProps<typeof Text> {
+  as?: ElementType
+}
 
 Text.displayName = 'Text'

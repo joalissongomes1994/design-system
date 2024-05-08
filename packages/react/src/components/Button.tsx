@@ -1,6 +1,5 @@
-import { ComponentProps } from 'react'
+import { ComponentProps, ElementType } from 'react'
 import { styled } from '../styles'
-import { VariantProps } from '@stitches/react'
 
 export const Button = styled('button', {
   all: 'unset',
@@ -29,26 +28,31 @@ export const Button = styled('button', {
     cursor: 'not-allowed',
   },
 
+  '&:focus': {
+    boxShadow: '0 0 0 2px $colors$gray100',
+  },
+
   variants: {
     variant: {
       primary: {
         color: '$white',
-        backgroundColor: '$ignite500',
+        background: '$ignite500',
 
         '&:not(:disabled):hover': {
-          backgroundColor: '$ignite300',
+          background: '$ignite300',
         },
 
         '&:disabled': {
           backgroundColor: '$gray200',
         },
       },
+
       secondary: {
         color: '$ignite300',
         border: '2px solid $ignite500',
 
         '&:not(:disabled):hover': {
-          backgroundColor: '$ignite500',
+          background: '$ignite500',
           color: '$white',
         },
 
@@ -57,6 +61,7 @@ export const Button = styled('button', {
           borderColor: '$gray200',
         },
       },
+
       tertiary: {
         color: '$gray100',
 
@@ -74,6 +79,7 @@ export const Button = styled('button', {
       sm: {
         height: 38,
       },
+
       md: {
         height: 46,
       },
@@ -86,7 +92,8 @@ export const Button = styled('button', {
   },
 })
 
-export interface ButtonComponentProps extends ComponentProps<typeof Button> {}
-export interface ButtonProps extends VariantProps<ButtonComponentProps> {}
+export interface ButtonProps extends ComponentProps<typeof Button> {
+  as?: ElementType
+}
 
 Button.displayName = 'Button'

@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Button, ButtonProps } from '@ignite-ui/react'
+import { Button, ButtonProps } from '@ignite-ui/react/src'
 import { ArrowRight } from 'phosphor-react'
 
 export default {
   title: 'Form/Button',
   component: Button,
-  tags: ['autodocs'],
   args: {
     children: 'Send',
     variant: 'primary',
@@ -15,18 +14,22 @@ export default {
   argTypes: {
     variant: {
       options: ['primary', 'secondary', 'tertiary'],
-      control: { type: 'inline-radio' },
+      control: {
+        type: 'inline-radio',
+      },
     },
     size: {
       options: ['sm', 'md'],
-      control: { type: 'inline-radio' },
+      control: {
+        type: 'inline-radio',
+      },
     },
     disabled: {
-      control: { type: 'boolean' },
+      control: {
+        type: 'boolean',
+      },
     },
-    onclick: {
-      action: 'click',
-    },
+    onClick: { action: 'clicked' },
   },
 } as Meta<ButtonProps>
 

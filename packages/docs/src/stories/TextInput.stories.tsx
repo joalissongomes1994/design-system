@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { TextInput, TextInputProps, Box, Text } from '@ignite-ui/react/src'
+import { Box, Text, TextInput, TextInputProps } from '@ignite-ui/react/src'
 
 export default {
   title: 'Form/Text Input',
   component: TextInput,
-  tags: ['autodocs'],
+  args: {},
   decorators: [
     (Story) => {
       return (
@@ -12,7 +12,7 @@ export default {
           as="label"
           css={{ display: 'flex', flexDirection: 'column', gap: '$2' }}
         >
-          <Text>Observations</Text>
+          <Text size="sm">Email address</Text>
           {Story()}
         </Box>
       )
@@ -22,12 +22,19 @@ export default {
 
 export const Primary: StoryObj<TextInputProps> = {
   args: {
-    placeholder: 'Add any observations...',
+    placeholder: 'Type your name',
   },
 }
 
 export const Disabled: StoryObj<TextInputProps> = {
   args: {
     disabled: true,
+  },
+}
+
+export const WithPrefix: StoryObj<TextInputProps> = {
+  args: {
+    prefix: 'cal.com/',
+    placeholder: 'your-username',
   },
 }

@@ -1,6 +1,5 @@
-import { VariantProps } from '@stitches/react'
+import { ComponentProps, ElementType } from 'react'
 import { styled } from '../styles'
-import { ComponentProps } from 'react'
 
 export const Heading = styled('h2', {
   fontFamily: '$default',
@@ -22,11 +21,12 @@ export const Heading = styled('h2', {
   },
 
   defaultVariants: {
-    size: '$md',
+    size: 'md',
   },
 })
 
-export interface HeadingComponentProps extends ComponentProps<typeof Heading> {}
-export interface HeadingProps extends VariantProps<HeadingComponentProps> {}
+export interface HeadingProps extends ComponentProps<typeof Heading> {
+  as?: ElementType
+}
 
 Heading.displayName = 'Heading'

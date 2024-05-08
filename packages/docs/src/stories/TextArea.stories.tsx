@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Box, Text, TextArea, TextAreaProps } from '@ignite-ui/react'
+import { Box, Text, TextArea, TextAreaProps } from '@ignite-ui/react/src'
 
 export default {
   title: 'Form/Text Area',
   component: TextArea,
-  tags: ['autodocs'],
+  args: {},
   decorators: [
     (Story) => {
       return (
@@ -12,7 +12,7 @@ export default {
           as="label"
           css={{ display: 'flex', flexDirection: 'column', gap: '$2' }}
         >
-          <Text>Email address</Text>
+          <Text size="sm">Observations</Text>
           {Story()}
         </Box>
       )
@@ -22,18 +22,12 @@ export default {
 
 export const Primary: StoryObj<TextAreaProps> = {
   args: {
-    placeholder: 'Type your name',
+    placeholder: 'Add any observations...',
   },
 }
 
 export const Disabled: StoryObj<TextAreaProps> = {
   args: {
     disabled: true,
-  },
-}
-
-export const WithPrefix: StoryObj<TextAreaProps> = {
-  args: {
-    prefix: 'cal.com/',
   },
 }
