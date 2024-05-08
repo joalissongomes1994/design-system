@@ -1,0 +1,2 @@
+import{A as t}from"./index.f114b410.js";import"./index.e4ae9b91.js";import"./index.8f5995ea.js";import"./iframe.e31360bb.js";import"./extends.bd401154.js";import"./index.9dffacf4.js";import"./jsx-runtime.433fc416.js";const c={title:"Data display/Avatar",component:t,args:{src:"https://github.com/joalissongomes1994.png",alt:"Joalisson Gomes"},argTypes:{src:{control:{type:"text"}}}},e={},l={args:{src:void 0}},n=["Primary","WithFallback"];export{e as Primary,l as WithFallback,n as __namedExportsOrder,c as default};
+//# sourceMappingURL=Avatar.stories.2e4bdcec.js.map
